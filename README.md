@@ -1,7 +1,7 @@
 # Number to Words Converter
 
 This is a web application built using **Spring Boot** that converts decimal number currency value into their word representation.  
-It provides a **Web UI** for users to input decimal number between 1 and 999999 to get output in words.
+It provides a **Web UI** for users to input decimal number between 1 and 999999.99 to get output in words.
 
 ---
 
