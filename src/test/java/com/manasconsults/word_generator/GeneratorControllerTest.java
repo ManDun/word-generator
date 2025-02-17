@@ -54,4 +54,15 @@ class GeneratorControllerTest {
                 .andExpect(view().name("base"));
     }
 
+    @Test
+    @WithMockUser
+    void testError() throws Exception {
+        mockMvc.perform(post("/convert")
+                        .param("number", "-1").with(csrf()))
+                .andExpect(status().isOk())
+                .andExpect(model().attributeExists("error"))
+                .andExpect(model().attribute("error", "Invalid input! Please enter a valid number."))
+                .andExpect(view().name("base"));
+    }
+
 }
